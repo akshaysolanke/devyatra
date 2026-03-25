@@ -17,6 +17,7 @@
         <module>admin-service</module>
         <module>user-service</module>
         <module>hotelmanager-service</module>
+        <module>booking-service</module>
     </modules>
 
 </project>
