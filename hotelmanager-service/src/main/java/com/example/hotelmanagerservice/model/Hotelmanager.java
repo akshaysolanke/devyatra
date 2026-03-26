@@ -1,16 +1,19 @@
 package com.example.hotelmanagerservice.model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
 public class Hotelmanager {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int managerid;
     private String managername;
     private String manageremail;
     private String managerpassword;
-    private int managercontactnumber;
+    private String managercontactnumber;
 
     public int getManagerid() {
         return managerid;
@@ -44,11 +47,11 @@ public class Hotelmanager {
         this.managerpassword = managerpassword;
     }
 
-    public int getManagercontactnumber() {
+    public String getManagercontactnumber() {
         return managercontactnumber;
     }
 
-    public void setManagercontactnumber(int managercontactnumber) {
+    public void setManagercontactnumber(String managercontactnumber) {
         this.managercontactnumber = managercontactnumber;
     }
 
@@ -59,7 +62,7 @@ public class Hotelmanager {
                 ", managername='" + managername + '\'' +
                 ", manageremail='" + manageremail + '\'' +
                 ", managerpassword='" + managerpassword + '\'' +
-                ", managercontactnumber=" + managercontactnumber +
+                ", managercontactnumber='" + managercontactnumber + '\'' +
                 '}';
     }
 }
