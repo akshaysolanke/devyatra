@@ -23,4 +23,9 @@ public class HotelManagerController {
     public List<Hotelmanager> getallmanagers(){
         return service.getallmanagers();
     }
+
+    @GetMapping("/getsingleId/{id}")
+    public Hotelmanager getManagerById(@PathVariable int id){
+        return service.getManagerById(id);
+    }
 }

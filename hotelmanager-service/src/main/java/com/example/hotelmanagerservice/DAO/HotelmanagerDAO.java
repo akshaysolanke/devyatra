@@ -22,4 +22,9 @@ public class HotelmanagerDAO implements HotelManagerService {
     public List<Hotelmanager> getallmanagers(){
         return managerrepo.findAll();
     }
+
+    @Override
+    public Hotelmanager getManagerById(int id){
+        return managerrepo.findById(id).orElse(null);
+    }
 }
