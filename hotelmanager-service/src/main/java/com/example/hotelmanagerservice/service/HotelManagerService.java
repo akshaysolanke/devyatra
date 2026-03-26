@@ -7,4 +7,5 @@ public interface HotelManagerService {
     Hotelmanager save(Hotelmanager manager);
     List<Hotelmanager> getallmanagers();
     Hotelmanager getManagerById(int id);
+    void deleteManagerById(int id);
 }

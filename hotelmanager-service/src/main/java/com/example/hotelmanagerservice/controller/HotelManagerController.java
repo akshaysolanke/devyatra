@@ -28,4 +28,10 @@ public class HotelManagerController {
     public Hotelmanager getManagerById(@PathVariable int id){
         return service.getManagerById(id);
     }
+
+    @DeleteMapping("/delete/{id}")
+    public String deleteManagerById(@PathVariable int id){
+        service.deleteManagerById(id);
+        return "Manager deleted with id: " + id;
+    }
 }

@@ -27,4 +27,9 @@ public class HotelmanagerDAO implements HotelManagerService {
     public Hotelmanager getManagerById(int id){
         return managerrepo.findById(id).orElse(null);
     }
+
+    @Override
+    public void deleteManagerById(int id){
+        managerrepo.deleteById(id);
+    }
 }
