@@ -1,7 +1,13 @@
 package com.example.adminservice.services;
 
-import org.springframework.stereotype.Service;
+import com.example.adminservice.models.Admin;
+import com.example.adminservice.models.Users;
 
-@Service
+import java.util.List;
+
 public interface adminService {
+
+   public List<Users> getallusers();
+
+   public Users getsingleuser(String userId);
 }

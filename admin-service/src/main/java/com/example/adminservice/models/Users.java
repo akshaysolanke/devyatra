@@ -1,14 +1,7 @@
-package com.userservice.model;
+package com.example.adminservice.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-
-@Entity
 public class Users {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+
     private String userId;
     private String firstName;
     private String lastName;
@@ -20,14 +13,6 @@ public class Users {
     private String role;
     private String userPass;
     private String userStatus;
-
-    public String getUserStatus() {
-        return userStatus;
-    }
-
-    public void setUserStatus(String userStatus) {
-        this.userStatus = userStatus;
-    }
 
     public String getUserId() {
         return userId;
@@ -107,6 +92,14 @@ public class Users {
 
     public void setUserPass(String userPass) {
         this.userPass = userPass;
+    }
+
+    public String getUserStatus() {
+        return userStatus;
+    }
+
+    public void setUserStatus(String userStatus) {
+        this.userStatus = userStatus;
     }
 
     @Override
