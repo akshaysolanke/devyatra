@@ -1,0 +1,96 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Background */
+body {
+    font-family: Arial, sans-serif;
+
+}
+
+/* Center container */
+
+/* Card */
+.registration-card {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* Header */
+.card-header {
+    background: #2575fc;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+.card-header h3 {
+    margin: 0;
+}
+
+/* Body */
+.card-body {
+    padding: 20px;
+}
+
+/* Form elements */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Inputs & textarea & select */
+input,
+textarea,
+select {
+    margin-bottom: 12px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+/* Focus effect */
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #2575fc;
+    box-shadow: 0 0 4px rgba(37, 117, 252, 0.5);
+}
+
+/* Button */
+button {
+    padding: 12px;
+    border: none;
+    background: #2575fc;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cnbdy{
+
+    padding: 40px;
+    margin: auto;
+}
+
+button:hover {
+    background: #1a5edb;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .registration-card {
+        margin: 10px;
+        width: 90%;
+    }
+}
