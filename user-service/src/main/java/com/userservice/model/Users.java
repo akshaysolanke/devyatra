@@ -27,21 +27,4 @@ public class Users {
     @Transient
     private List<Booking> bookings = new ArrayList<>();
 
-
-    @Override
-    public String toString() {
-        return "Users{" +
-                "userId='" + userId + '\'' +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", userEmail='" + userEmail + '\'' +
-                ", contact='" + contact + '\'' +
-                ", gender='" + gender + '\'' +
-                ", age='" + age + '\'' +
-                ", userAddress='" + userAddress + '\'' +
-                ", role='" + role + '\'' +
-                ", userPass='" + userPass + '\'' +
-                ", userStatus='" + userStatus + '\'' +
-                '}';
-    }
 }
