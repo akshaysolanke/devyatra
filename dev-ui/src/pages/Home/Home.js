@@ -1,5 +1,5 @@
 import React from 'react';
-import './Home.css'; // Importing the separate CSS file
+import './Home.css'; 
 
 const Home = () => {
     const destinations = [

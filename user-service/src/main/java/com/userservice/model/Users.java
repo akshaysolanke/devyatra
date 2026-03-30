@@ -1,9 +1,6 @@
 package com.userservice.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Users {
@@ -17,8 +14,10 @@ public class Users {
     private String gender;
     private String age;
     private String userAddress;
+    @Column(columnDefinition = "String default User")
     private String role;
     private String userPass;
+    @Column(columnDefinition = "String default Pending")
     private String userStatus;
 
     public String getUserStatus() {
