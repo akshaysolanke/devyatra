@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/users")
@@ -16,14 +17,14 @@ public class userController {
     userService us;
 
     @PostMapping("/register")
-    public String userRegister(@RequestBody Users users) {
-        us.saveUser(users);
-        return "User registered successfully: ";
+    public Users userRegister(@RequestBody Users users) {
+        users.setUserId(UUID.randomUUID().toString());
+        return us.saveUser(users);
     }
 
     @GetMapping("/getUser/{userId}")
-    public String getUser(@PathVariable String userId) {
-        return us.getUser(userId);
+    public Users getUser(@PathVariable String userId) {
+        return us.getUserById(userId);
     }
 
     @GetMapping("/getAllUsers")
@@ -35,5 +36,10 @@ public class userController {
     public String deleteUser(@PathVariable String userId) {
         us.deleteUserById(userId);
         return "User deleted";
+    }
+
+    @GetMapping("/getUserBooking/{userId}")
+    public Users getUserBooking(@PathVariable String userId) {
+        return us.getUserBookingById(userId);
     }
 }
