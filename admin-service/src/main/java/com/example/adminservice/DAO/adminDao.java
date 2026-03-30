@@ -10,12 +10,15 @@ import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class adminDao implements adminService {
 
     @Autowired
     adminRepo ar;
+
+
 
     @Autowired
     RestTemplate rt;
@@ -29,10 +32,22 @@ public class adminDao implements adminService {
     }
 
     @Override
-    public  Users getsingleuser(String userId) {
-        ArrayList t1=rt.getForObject("http://localhost:8080/users/getUser/"+userId, ArrayList.class);
-        Users a1= ar.findByUserId(userId);
-        return a1.setItems(t1);
+//    public  Users getsingleuser(String userId) {
+//        Users t1=rt.getForObject("http://localhost:8080/users/getUser/"+userId, Users.class);
+//        Admin u1=ur.findById(userId).orElse(null);
+//        return u1;
+//    }
+    public Users getsingleuser(String userId) {
 
+        Users user = rt.getForObject(
+                "http://localhost:8080/users/getUser/"+userId,
+                Users.class
+        );
+
+        if (user == null) {
+            throw new RuntimeException("User not found");
+        }
+
+        return user;
     }
 }
