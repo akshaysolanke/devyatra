@@ -1,96 +1,96 @@
-/* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-/* Background */
-body {
-    font-family: Arial, sans-serif;
-
-}
-
-/* Center container */
-
-/* Card */
-.registration-card {
+/* 2. Container and Card */
+.cnbdy {
     width: 100%;
-    max-width: 400px;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    padding: 20px;
+}
+
+.registration-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
 
-/* Header */
 .card-header {
-    background: #2575fc;
+    background-color: #4a90e2;
     color: white;
+    padding: 20px;
     text-align: center;
-    padding: 15px;
 }
 
 .card-header h3 {
     margin: 0;
+    font-weight: 600;
 }
 
-/* Body */
+/* 3. Form Styling */
 .card-body {
-    padding: 20px;
+    padding: 30px;
 }
 
-/* Form elements */
 form {
     display: flex;
     flex-direction: column;
+    gap: 15px; /* Spacing between inputs */
 }
 
-/* Inputs & textarea & select */
+/* 4. Input & Select Fields */
 input,
 textarea,
 select {
-    margin-bottom: 12px;
-    padding: 10px;
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
     border-radius: 6px;
-    border: 1px solid #ccc;
     font-size: 14px;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Focus effect */
 input:focus,
 textarea:focus,
 select:focus {
     outline: none;
-    border-color: #2575fc;
-    box-shadow: 0 0 4px rgba(37, 117, 252, 0.5);
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
 }
 
-/* Button */
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* 5. Button Styling */
 button {
-    padding: 12px;
-    border: none;
-    background: #2575fc;
+    background-color: #4a90e2;
     color: white;
-    font-size: 16px;
+    padding: 14px;
+    border: none;
     border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
-    transition: 0.3s;
-}
-
-.cnbdy{
-
-    padding: 40px;
-    margin: auto;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
 }
 
 button:hover {
-    background: #1a5edb;
+    background-color: #357abd;
 }
 
-/* Responsive */
-@media (max-width: 500px) {
-    .registration-card {
-        margin: 10px;
-        width: 90%;
+button:active {
+    transform: translateY(1px);
+}
+
+/* 6. Responsive Tweaks */
+@media (max-width: 480px) {
+    .cnbdy {
+        padding: 10px;
+    }
+
+    .card-body {
+        padding: 20px;
     }
 }

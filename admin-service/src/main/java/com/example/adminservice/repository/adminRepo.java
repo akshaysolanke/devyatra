@@ -10,5 +10,5 @@ import java.util.List;
 @Repository
 public interface adminRepo extends JpaRepository<Admin, Integer> {
 
-    public Users findByUserId(String uid);
+   // public Users findByUserId(String uid);
 }

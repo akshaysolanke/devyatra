@@ -17,6 +17,15 @@ public class userDao implements userService {
 
     @Override
     public void saveUser(Users users) {
+
+        if(users.getRole()==null)
+        {
+            users.setRole("User");
+        }
+        if(users.getUserStatus()==null)
+        {
+            users.setUserStatus("pending");
+        }
         ur.save(users);
     }
 
