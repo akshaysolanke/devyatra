@@ -10,7 +10,7 @@ import java.util.List;
 public interface userService {
     public void saveUser(Users users);
 
-    public String getUser(String userId);
+    public Users getUser(String userId);
 
     public List<Users> getAllUsers();
 

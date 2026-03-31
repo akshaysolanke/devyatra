@@ -22,7 +22,7 @@ public class userController {
     }
 
     @GetMapping("/getUser/{userId}")
-    public String getUser(@PathVariable String userId) {
+    public Users getUser(@PathVariable String userId) {
         return us.getUser(userId);
     }
 

@@ -30,22 +30,8 @@ public class userDao implements userService {
     }
 
     @Override
-    public String getUser(String userId) {
-        Users users = ur.findById(userId).orElse(null);
-        if (users != null) {
-            return "User ID: " + users.getUserId() + "\n" +
-                    "First Name: " + users.getFirstName() + "\n" +
-                    "Last Name: " + users.getLastName() + "\n" +
-                    "Email: " + users.getUserEmail() + "\n" +
-                    "Contact: " + users.getContact() + "\n" +
-                    "Gender: " + users.getGender() + "\n" +
-                    "Age: " + users.getAge() + "\n" +
-                    "Address: " + users.getUserAddress() + "\n" +
-                    "Role: " + users.getRole() + "\n" +
-                    "Status: " + users.getUserStatus();
-        }   else {
-            return "User not found with ID: " + userId;
-        }
+    public Users getUser(String userId) {
+        return ur.findById(userId).orElse(null);
     }
 
     @Override
