@@ -3,10 +3,7 @@ package com.example.hotelservice.controller;
 import com.example.hotelservice.model.Hotel;
 import com.example.hotelservice.service.HotelService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/hotel")
@@ -18,5 +15,10 @@ public class HotelController {
     @PostMapping("/registerHotel")
     public Hotel register(@RequestBody Hotel hotel){
         return hotelservice.register(hotel);
+    }
+
+    @GetMapping("/getHotelById/{hotelId}")
+    public Hotel getHotelById(@PathVariable int hotelId){
+        return hotelservice.getHotelById(hotelId);
     }
 }
