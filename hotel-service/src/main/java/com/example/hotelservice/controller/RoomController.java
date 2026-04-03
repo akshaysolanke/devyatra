@@ -29,7 +29,8 @@ public class RoomController {
     }
 
     @PutMapping("/updateRoom/{roomId}")
-    public Room updateRoom(@RequestBody Room room){
+    public Room updateRoom(@PathVariable int roomId,@RequestBody Room room){
+        room.setRoomId(roomId);
         return roomservice.updateRoom(room);
     }
 
@@ -43,5 +44,8 @@ public class RoomController {
         return roomservice.getAvailableRooms();
     }
 
-
+    @GetMapping("/hotel/{hotelId}")
+    public List<Room> getRoomsByHotelId(@PathVariable int hotelId){
+        return roomservice.getRoomsByHotelId(hotelId);
+    }
 }

@@ -43,4 +43,9 @@ public class RoomDAO implements RoomService {
     public List<Room> getAvailableRooms(){
         return roomrepo.findByAvailable(true);
     }
+
+    @Override
+    public List<Room> getRoomsByHotelId(int hotelId){
+        return roomrepo.findRoomByHotelId(hotelId);
+    }
 }

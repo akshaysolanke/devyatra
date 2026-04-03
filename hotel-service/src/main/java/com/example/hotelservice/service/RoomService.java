@@ -12,4 +12,5 @@ public interface RoomService {
 
     public String deleteRoom(int roomId);
     public List<Room> getAvailableRooms();
+    public List<Room> getRoomsByHotelId(int hotelId);
 }
