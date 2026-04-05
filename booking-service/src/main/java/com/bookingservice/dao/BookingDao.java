@@ -40,17 +40,7 @@ public class BookingDao implements BookingService {
         return bookingRepo.findByUserId(userId);
     }
 
-    @Override
-    public Booking getHotel(String hotelId) {
-        String url = "http://localhost:9002/hotel/getHotelById/"+hotelId;
-        HotelDto ht = restTemplate.getForObject(url, HotelDto.class);
 
-        Booking booking = new Booking();
-        if (ht  != null) {
-            booking.getHotelDetails().add(ht);
-        }
-        return booking;
-    }
 
 
 }
