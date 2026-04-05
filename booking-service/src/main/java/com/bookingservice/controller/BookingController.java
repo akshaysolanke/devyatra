@@ -38,8 +38,6 @@ public class BookingController {
         return bookingService.getBookingByUserId(userId);
     }
 
-    public Booking getUserHotelBooking(@RequestBody String hotelId) {
-        return bookingService.getHotel(hotelId);
-    }
+
 
 }
