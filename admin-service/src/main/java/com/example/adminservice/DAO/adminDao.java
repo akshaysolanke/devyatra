@@ -11,15 +11,12 @@ import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class adminDao implements adminService {
 
     @Autowired
     adminRepo ar;
-
-
 
     @Autowired
     RestTemplate rt;
@@ -46,4 +43,13 @@ public class adminDao implements adminService {
 
         return user;
     }
+
+    @Override
+    public void deleteuser(String userId) {
+
+        String url="http://localhost:8080/users/deleteUser/"+userId;
+        rt.put(url, null);
+    }
+
+
 }

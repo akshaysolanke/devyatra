@@ -42,7 +42,6 @@ public class userDao implements userService {
     @Override
     public void deleteUserById(String userId) {
         Users users = ur.findById(userId).orElseThrow(() -> new RuntimeException("User not found with ID: " + userId));
-
         users.setUserStatus("inactive");
         ur.save(users);
     }

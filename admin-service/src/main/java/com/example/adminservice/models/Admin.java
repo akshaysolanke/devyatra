@@ -15,9 +15,19 @@ public class Admin {
     private String aname;
     @Column(nullable = false)
     private String apassword;
+    private String role ="admin";
 
     @Transient
     private List<Users> items=new ArrayList();
+
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
 
     public int getAid() {
         return aid;
@@ -57,6 +67,7 @@ public class Admin {
                 "aid=" + aid +
                 ", aname='" + aname + '\'' +
                 ", apassword='" + apassword + '\'' +
+                ", role='" + role + '\'' +
                 ", items=" + items +
                 '}';
     }
