@@ -10,8 +10,4 @@ public interface adminService {
    public List<Users> getallusers();
 
    public Users getsingleuser(String userId);
-
-   public void deleteuser(String userId);
-
-
 }

@@ -13,4 +13,5 @@ public interface BookingService {
     public List<Booking> getAllBookings();
 
     public List<Booking> getBookingByUserId(String userId);
+
 }

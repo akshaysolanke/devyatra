@@ -69,4 +69,9 @@ public class userDao implements userService {
 
         return ur1;
     }
+
+    @Override
+    public Users getUserHotelBookingById(String hotelId) {
+        return null;
+    }
 }
