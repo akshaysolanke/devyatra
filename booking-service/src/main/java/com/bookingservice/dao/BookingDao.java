@@ -1,6 +1,7 @@
 package com.bookingservice.dao;
 
 import com.bookingservice.dto.HotelDto;
+import com.bookingservice.external.HotelRoomClient;
 import com.bookingservice.model.Booking;
 import com.bookingservice.repository.BookingRepo;
 import com.bookingservice.services.BookingService;
@@ -17,7 +18,8 @@ public class BookingDao implements BookingService {
     private BookingRepo bookingRepo;
 
     @Autowired
-    private RestTemplate restTemplate;
+   private HotelRoomClient client;
+
 
     @Override
     public String createBooking(Booking booking) {
