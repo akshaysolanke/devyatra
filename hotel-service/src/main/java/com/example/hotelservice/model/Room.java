@@ -13,9 +13,5 @@ public class Room {
     private int numOfBed;
     private boolean available;
     private double price;
-
-    @ManyToOne
-    @JoinColumn(name = "hotel_id")
-    private Hotel hotel;
-
+    private int hotelId;
 }
